@@ -1,7 +1,20 @@
-.comments-container {
-  display: none;
+.posts {
+  background-color: #fafafa;
 }
 
-.show {
-  display: block;
+.post {
+  margin: 20px;
+  font-size: 16px;
+}
+
+.comment {
+  margin: 20px;
+}
+
+.comments-list {
+  font-size: 12px;
+}
+
+input, .add-comment {
+  margin-top:20px;
 }

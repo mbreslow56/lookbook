@@ -16,9 +16,10 @@
       </div>
 
       <script id="posts-template" type="text/x-handlebars-template">
-        <div class="post"> {{ postsText }}
+        <div class="post"> {{ postText }}
           <div class="comments">
-            <div class="comment"><p>{{ commentText }}</p><button></button></div>
+            <div class="comments-list"><p>{{ comment }}</p></div>
+            <input type="text" name="comment-text"><button class="btn btn-primary add-comment col-xs-2 pull-right">Post Comment</button>
           </div>
         </div>
       </script>

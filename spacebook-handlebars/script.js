@@ -43,7 +43,7 @@ var SpacebookApp = function () {
 
       var source = $('#posts-template').html();
       var template = Handlebars.compile(source);
-      var newHTML = template({ postText: post });
+      var newHTML = template({ postText: post.text });
       $('.posts').append(newHTML);
     }
   }
@@ -66,11 +66,15 @@ var SpacebookApp = function () {
         var comment = post.comments[j];
 
         // append the comment to the post we wanted to comment on
-        $post.find('.comments-list').append(
+      var sourcetwo = $('.posts-template').html();
+      var templatetwo = Handlebars.compile(sourcetwo);
+      var oldHTML = templatetwo({ comment: comment.text });
+      $('.comments-list').append(oldHTML);
+       /* $post.find('.comments-list').append(
           '<div class="comment">' + comment.text +
           '<button class="btn btn-danger remove-comment">Remove Comment</button>' +
           '</div>'
-        );
+        );*/
       };
     };
   };
